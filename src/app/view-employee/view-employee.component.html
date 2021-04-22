@@ -1,0 +1,17 @@
+
+
+
+<div *ngIf="noEmployees">
+
+    <h5>Sorry there are no employees</h5>
+</div>
+<div class="d-inline-flex flex-row" *ngFor="let employee of employees ">
+    <app-employee-card [employee]="employee" 
+                       (editEmployee)="onEditEmployeeChange($event)" 
+                       (deleteEmployee)="onDeleteEmployeeChange($event)" >
+    </app-employee-card>
+
+</div>
+
+<app-edit-employee #editEmployee></app-edit-employee>
+<app-delete-employee #deleteEmployee></app-delete-employee>

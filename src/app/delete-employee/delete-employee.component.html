@@ -1,0 +1,19 @@
+
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title text-primary" id="modal-basic-title">Delete Employee</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <h5>Are you sure you want to delete {{this.employee.firstName }} , {{ this.employee.lastName }}</h5>
+    </div>
+    <div class="modal-footer">    
+      <button type="button" class="btn btn-danger" (click)="modal.close()" >Cancel</button>
+      <button  class="btn btn-outline-dark"  (click)="onDeleteEmployee();modal.close()" >Ok</button>
+    </div>
+  </ng-template>
+  

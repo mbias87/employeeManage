@@ -1,0 +1,77 @@
+
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title text-primary" id="modal-basic-title">Add Employee</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #employeeForm="ngForm"  (ngSubmit)="onSubmit(employeeForm)">
+      <div class="form-group">
+        
+        <label for="first-name" id="first-name-label">First Name:</label>
+        <input type="text" 
+               class="form-control"
+               id="first-name"
+               aria-labelledby="first-name-label" 
+               [(ngModel)]= "employee.firstName" 
+               name="firstName" >
+      </div>
+
+      <div class="form-group">
+
+        <label for="last-name" id="last-name-label">Last Name:</label>
+        <input type="text" 
+               id="last-name" 
+               class="form-control"
+               aria-labelledby="last-name-label" 
+               [(ngModel)]="employee.lastName"
+               name="lastName">
+
+      </div>
+
+
+      <div class="form-group">
+        <label for="phone-number" id="phone-number-label">Phone Number:</label>
+        <input type="tel" 
+               id="phone-number" 
+               class="form-control"
+               aria-labelledby="phone-number-label" 
+               [(ngModel)]="employee.phone"
+               name="phone">
+      </div>
+
+        <div class="form-group">
+
+            <label for="date-joined" id="date-joined-label">Date Joined:</label>
+            <input type="date" 
+                   class="form-control" 
+                   id="date-joined" 
+                   placeholder="yyyy-mm-dd" 
+                   name="dateJoined" 
+                   [(ngModel)]="employee.dateJoined" >
+
+        </div>
+
+      
+      <div class="form-group">
+
+        <label for="job" id="job-label">Job:</label>
+        <input type="text" 
+               class="form-control"
+               id="job" 
+               aria-labelledby="job-label" 
+               [(ngModel)]="employee.job" name="job">
+
+      </div>
+
+    </form>
+  </div>
+  <div class="modal-footer">    
+    <button type="button" class="btn btn-danger" (click)="modal.close()" >Cancel</button>
+    <button  class="btn btn-outline-dark"  (click)="onSubmit(employeeForm.value);modal.close()" >Save</button>
+  </div>
+</ng-template>

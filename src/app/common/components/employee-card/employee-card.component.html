@@ -1,0 +1,21 @@
+
+
+<div id="employee-card" class="card" style="width: 18rem;">
+    <div class="card-header">
+        <!-- <p> <b> Name: </b>{{ employee.firstName }} {{ employee.lastName }}</p>  -->
+        <h5>{{ employee.firstName }} {{ employee.lastName }}</h5>
+    </div>
+    <div class="card-body">  
+           
+        <p> <b> Job: </b> {{ employee.job }}</p>    
+      <p> <b> Phone: </b> {{ employee.phone }} </p>
+      <p> <b> Date Joined: </b> {{ employee.dateJoined | date: 'short'}}</p>
+        
+      
+    </div>
+
+    <div class="card-footer">
+        <button class="btn btn-primary mr-2" (click)="onEditEmployee()">Edit </button>
+        <button class="btn btn-danger" (click)="onDeleteEmployee()">Delete</button>
+    </div>
+</div>
