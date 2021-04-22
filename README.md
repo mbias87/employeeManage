@@ -9,6 +9,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Make sure to run the following commands to create and populate db (npm run generate), then run other command (npm run server)
+
+
+
 npm run generate
 
 npm run server
