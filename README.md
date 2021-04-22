@@ -8,6 +8,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Make sure to run the following commands to create and populate db (npm run generate), then run other command (npm run server)
+npm run generate
+
+npm run server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
